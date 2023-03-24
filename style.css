@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Alexandria', sans-serif,Roboto,Arial;
+    text-decoration: none;
+}
+
+*::selection {
+    background-color: #18253a;
+    color: #CCD6F6;
+}
+
+body{
+    background-color: #110E1F;
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+}   
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #8892b0cf;
+    border-radius: 6px;
+}
+header{
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    line-height: 1.3;
+    box-sizing: inherit;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 11;
+    backdrop-filter: blur(10px);
+    background-color: rgba(17, 14, 31, 0.85);
+}
+
+.header-hide {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.header.shadow {
+    box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.403);
+    transition: all 0.4s ease-in-out;
+}
+
+.myLogo{
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.myLogo img{
+    width: 35px;
+    height: 40px;
+}
+
+.navContainer{
+    width: 700px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    text-decoration: none;
+    display: flex;
+    column-gap: 30px;
+}
+
+.Options{
+    font-size: 16px;
+    border: 2px solid #41CCFF;
+    border-radius: 3px;
+    padding: 3px 10px 3px 10px;
+    font-size: 13px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+}
+
+.Options:hover{
+    background-color: #41CCFF;
+    border: 2px solid #41CCFF;
+    padding: 3px 10px 3px 10px;
+    transition: all 0.5s;
+    color: #110E1F;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.Options a{
+    color:#8892B0;
+}
+
+.Options a span{
+    color:#41CCFF;
+}
+
+.Options:hover a, .Options:hover span{
+    color: #110E1F;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section{
+    height: 80vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+}
+
+.sectionContent{
+    background-color: lightcoral;
+    height: 100%;
+    width:auto;
+}
+
+.SocialsContainer{
+    position: fixed;
+    width: 100px;
+    height: 500px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.Socials{
+    height: 35px;
+    width: 35px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Socials svg path{
+    fill: #8892B0;
+}
+
+
+.Socials svg:hover path{
+    fill: #41CCFF;
+}
+
+.Socials:hover{
+    cursor:pointer;
+    transform: translateY(-3px);
+    transition: all 0.1s ease-in-out;
+}
+
+.verticalLine{
+    height: 150px;
+    width: 3px;
+    position: relative;
+    bottom: 0;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    margin-top: 10px;
+    background-color: #8892B0;
+}
+
+.EmailContainer{
+    height: 500px;
+    width: 100px;
+    position: fixed;;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.Email{
+    box-sizing: border-box;
+    transform: rotate(90deg);
+    margin-bottom: 140px;
+}
+
+.Email a{
+    display: block;
+    text-orientation:upright;
+    color: #8892B0;
+    font-size: 15px;
+}
+
+.Email a:hover{
+    color: #41CCFF;
+    transform: translateX(-2px);
+    transition: all 0.2s ease-in-out;
+}
+
+.HomeContent{
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    justify-content: center;
+}
+
+.introSalutation{
+    font-family: 'Source Code Pro', monospace;
+    color: #41CCFF;
+}
+
+.MyName{
+    color: #CCD6F6;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.subHeading{
+    color: #8892B0;
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subHeading span{
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.subHeading span:hover{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    color: #41CCFF;
+    transition: all 0.2s ease-in-out;
+}
+
+.subHeading span::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #41CCFF;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.subHeading span:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.shortIntro{
+    width: 600px;
+    text-align: justify;
+    color: #8892B0;
+    font-weight: 300;
+    font-size:16px;
+    margin-bottom: 20px;
+}
+
+.ContactMebtn{
+    width: 250px;
+    height: 50px;
+    border: 3px solid #41CCFF;
+    border-radius: 5px;
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContactMebtn:hover{
+    background-color: #41ccff18;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ContactMebtn p{
+    font-family: 'Source Code Pro', monospace;
+    color: #41CCFF;
+}
+
+.AMheader{
+    display: flex;
+    align-items: center;
+    background-color: lightslategrey;
+}
+
+.AMheader h1{
+    font-size: 30px;
+    color: #CCD6F6;
+    width: 190px;
+}
+
+.horizontalLine{
+    border-radius: 2px;
+    height: 3px;
+    width: 100%;
+    background-color: #41CCFF;
+}
+
+.AMcontent{
+    width: 100%;
+    height: auto;
+}
