@@ -81,7 +81,6 @@ header{
 .navContainer{
     margin-right:15px ;
     position: relative;
-    width: 60%;
     height: 100%;
     display: flex;
     justify-content: center;
