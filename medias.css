@@ -1,0 +1,76 @@
+@media screen and (max-width:1388px) {
+    .projectLeft, .projectRight{
+        align-items: center;
+        text-align: center;
+    }
+
+    .projectLeft .ProjectThumbnail, .projectRight .ProjectThumbnail{
+        position: relative;
+        
+    }
+}
+
+@media screen and (max-width:770px){
+    .MyCertificates{
+        grid-template-columns: 1fr;
+    }
+
+    .CertificateContainer{
+        width: 100%;
+    }
+
+    .certificate img{
+        width: 70%;
+    }
+
+    .certificateInfo{
+        text-align: center;
+        align-items: center;
+    }
+
+    .navbar_links{
+        display: none;
+    }
+
+    .navContainer{
+        justify-content: end;
+    }
+
+    .navContainer .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media screen and (max-width:669px) {
+    .AMmaincontent{
+        flex-direction: column;
+    }
+
+    .infosAboutMe summary p{
+        text-align: justify;
+    }
+
+    .infosAboutMe, .imgContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .dropdown_menu{
+        left:15px;
+        width: unset;
+    }
+
+    .EmailContainer,.SocialsContainer{
+        display: none;
+    }
+
+    .ProjectContainer{
+        width: 100%;
+    }
+}
