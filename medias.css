@@ -50,15 +50,30 @@
         flex-direction: column;
     }
 
+    section{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
     .infosAboutMe summary p{
         text-align: justify;
     }
 
-    .infosAboutMe, .imgContainer{
+    .infosAboutMe{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
+    }
+
+    .imgContainer{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .certificate img{
+        min-width: 270px;
     }
 
     .dropdown_menu{
