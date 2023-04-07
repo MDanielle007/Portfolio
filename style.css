@@ -16,10 +16,12 @@
 
 html{
     scroll-behavior: smooth;
+    width: 100%;
 }
 
 body{
     background-color: #110E1F;
+    position: relative;
 }
 
 body::-webkit-scrollbar {
@@ -35,18 +37,21 @@ body::-webkit-scrollbar-thumb {
     background-color: #8892b0cf;
     border-radius: 6px;
 }
+
+/*---------------- Header ---------------- */
+
 header{
     position: fixed;
     height: 70px;
     width: 100%;
     display: flex;
-    justify-content: space-between; 
+    justify-content: end; 
     line-height: 1.3;
     box-sizing: inherit;
     display: flex;
     align-items: center;
     position: fixed;
-    top: 0px;
+    top: 0;
     z-index: 11;
     backdrop-filter: blur(10px);
     background-color: rgba(17, 14, 31, 0.85);
@@ -63,8 +68,9 @@ header{
 }
 
 .myLogo{
-    margin-top: 5px;
-    margin-left: 30px;
+    position: absolute;
+    top: 10px;
+    left: 30px;
 }
 
 .myLogo img{
@@ -73,50 +79,104 @@ header{
 }
 
 .navContainer{
-    width: 700px;
+    margin-right:15px ;
+    position: relative;
+    width: 60%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-nav{
+.navbar_links{
     text-decoration: none;
     display: flex;
-    column-gap: 30px;
+    column-gap: clamp(0.625rem, 0.2423rem + 1.7007vw, 1.875rem);;
 }
 
-.Options{
+.navbar_links .Options a:hover{
+    font-weight: bold;
+    background-color: #41ccff;
+    box-shadow: 0 3px 10px #41ccff;
     border: 2px solid #41CCFF;
-    border-radius: 3px;
-    padding: 3px 10px 3px 10px;
-    font-size: 13px;
-}
-
-.Options:hover{
-    background-color: #41CCFF;
-    border: 2px solid #41CCFF;
-    padding: 3px 10px 3px 10px;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     color: #110E1F;
     cursor: pointer;
 }
 
-
-.Options a{
-    font-family: 'Source Code Pro', monospace;
-    color:#41CCFF;
-}
-
-.Options a span{
-    color:#41CCFF;
-}
-
-.Options:hover a, .Options:hover span{
-    font-weight: 700;
+.Options a:hover span{
     color: #110E1F;
 }
+
+.navbar_links .Options a{
+    font-family: 'Source Code Pro', monospace;
+    color:#41CCFF;
+    border: 2px solid #41CCFF;
+    border-radius: 3px;
+    padding: 3px 10px 3px 10px;
+    font-size: clamp(0.5625rem, 0.486rem + 0.3401vw, 0.8125rem);
+}
+
+.toggle_btn{
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.toggle_btn svg path{
+    fill: #CCD6F6;
+}
+
+.dropdown_menu{
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 75px;
+    height: 0px;
+    right: 15px;
+    width: 300px;
+    background-color: #131d2ec6;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 280px;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 10px #0b091488;
+}
+
+.dropdown_menu .Options{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .Options a{
+    width: 150px;
+    background-color: #110E1F;
+    font-family: 'Source Code Pro', monospace;
+    color:#41CCFF;
+    border: 1px solid #41CCFF;
+    border-radius: 3px;
+    padding: 5px 10px 5px 10px;
+}
+
+.dropdown_menu .Options a:hover{
+    background-color: #41ccff;
+    box-shadow: 0 3px 10px #41ccff;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    color: #110E1F;
+    cursor: pointer;
+}
+
+/*---------------- Main ---------------- */
 
 main{
     display: flex;
@@ -126,11 +186,10 @@ main{
 }
 
 section{
-    height: 80vh;
-    width: 70vw;
+    width: clamp(18.75rem, 3.9031rem + 65.9864vw, 67.25rem);
     display: flex;
     flex-direction: column;
-    padding: 70px;
+    padding:70px;
 }
 
 .sectionContent{
@@ -138,9 +197,11 @@ section{
     width:auto;
 }
 
+/*---------------- socials ---------------- */
+
 .SocialsContainer{
     position: fixed;
-    width: 100px;
+    width: clamp(1.5625rem, 0.1276rem + 6.3776vw, 6.25rem);;
     height: 500px;
     bottom: 0;
     display: flex;
@@ -150,10 +211,11 @@ section{
 }
 
 .Socials{
-    height: 30px;
-    width: 30px;
+    width: clamp(1.25rem, 1.0587rem + 0.8503vw, 1.875rem);
+    height: clamp(1.25rem, 1.0587rem + 0.8503vw, 1.875rem);
     margin-bottom: 10px;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
 }
@@ -170,8 +232,8 @@ section{
 }
 
 .verticalLine{
-    height: 150px;
-    width: 3px;
+    height: clamp(6.25rem, 5.2934rem + 4.2517vw, 9.375rem);;
+    width: 2px;
     position: relative;
     bottom: 0;
     border-top-right-radius: 2px;
@@ -179,12 +241,36 @@ section{
     background-color: #8892B0;
 }
 
+.socialToolTip{
+    opacity: 0;
+    position: absolute;
+    background-color: #18253a66;
+    color: #CCD6F6;
+    min-width: 150px;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    left:40px;
+    padding: 5px 10px 5px 10px;
+    font-size: clamp(0.625rem, 0.5293rem + 0.4252vw, 0.9375rem);
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+}
+
+.Socials:hover .socialToolTip{
+    display: block;
+    opacity: 1;
+    opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px #41ccffb0;
+}
+
+
 .EmailContainer{
     height: 500px;
-    width: 100px;
+    width: clamp(1.5625rem, 0.1276rem + 6.3776vw, 6.25rem);
     position: fixed;;
     bottom: 0;
-    right: 0;
+    right: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,20 +280,25 @@ section{
 .Email{
     box-sizing: border-box;
     transform: rotate(90deg);
-    margin-bottom: 140px;
+    margin-bottom: clamp(6.875rem, 6.301rem + 2.551vw, 8.75rem);;
 }
 
 .Email a{
     display: block;
     text-orientation:upright;
     color: #8892B0;
-    font-size: 15px;
+    font-size: clamp(0.625rem, 0.5293rem + 0.4252vw, 0.9375rem);
 }
 
 .Email a:hover{
     color: #41CCFF;
     transform: translateX(-3px);
     transition: all 0.3s ease-in-out;
+}
+
+/*---------------- Home ---------------- */
+#Home{
+    height: 70vh;
 }
 
 .HomeContent{
@@ -221,23 +312,25 @@ section{
 
 .introSalutation{
     font-family: 'Source Code Pro', monospace;
+    font-size: clamp(0.625rem, 0.5102rem + 0.5102vw, 1rem);
     color: #41CCFF;
 }
 
 .MyName{
     color: #CCD6F6;
-    font-size: 70px;
+    font-size: clamp(2.5rem, 1.926rem + 2.551vw, 4.375rem);
     font-weight: 700;
 }
 
 .subHeading{
     color: #8892B0;
-    font-size: 70px;
+    font-size: clamp(2.5rem, 1.926rem + 2.551vw, 4.375rem);
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .subHeading span{
+    font-size: clamp(2.75rem, 2.2526rem + 2.2109vw, 4.375rem);
     display: inline-block;
     position: relative;
     padding-bottom: 3px;
@@ -270,23 +363,30 @@ section{
 }
 
 .shortIntro{
-    width: 600px;
+    width: clamp(18.75rem, 13.0102rem + 25.5102vw, 37.5rem);
     text-align: justify;
     color: #8892B0;
     font-weight: 300;
-    font-size:16px;
+    font-size: clamp(0.75rem, 0.6735rem + 0.3401vw, 1rem);
     margin-bottom: 20px;
 }
 
 .ContactMebtn{
-    width: 250px;
-    height: 50px;
+    width: clamp(6.25rem, 3.3801rem + 12.7551vw, 15.625rem);;
+    height: clamp(1.875rem, 1.4923rem + 1.7007vw, 3.125rem);;
     border: 3px solid #41CCFF;
     border-radius: 5px;
     display: flex;
     column-gap: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     justify-content: center;
     align-items: center;
+}
+
+.ContactMebtn svg{
+    width:clamp(0.9375rem, 0.6505rem + 1.2755vw, 1.875rem);
+    height:clamp(0.9375rem, 0.6505rem + 1.2755vw, 1.875rem);
 }
 
 .ContactMebtn:hover{
@@ -298,8 +398,11 @@ section{
 
 .ContactMebtn p{
     font-family: 'Source Code Pro', monospace;
+    font-size: clamp(0.75rem, 0.6735rem + 0.3401vw, 1rem);
     color: #41CCFF;
 }
+
+/*---------------- sectionheaders ---------------- */
 
 .sectionheader{
     display: flex;
@@ -308,7 +411,6 @@ section{
 }
 
 .sectionheader h1{
-    width: 170px;
     font-size: 30px;
     color: #CCD6F6;
 }
@@ -325,9 +427,9 @@ section{
     background-color: #41CCFF;
 }
 
+/*---------------- About Me ---------------- */
+
 .AMmaincontent{
-    width: 100%;
-    height: 100%;
     display: flex;
 }
 
@@ -342,20 +444,21 @@ section{
     display: flex;
     flex-direction: column;
     padding: 30px 20px 15px 20px;
-    margin-bottom: 20px;
+    margin-bottom:20px;
     row-gap: 15px;
 }
 
 .infosAboutMe summary p{
     color: #CCD6F6;
     line-height: 24px;
-    font-size: 16px;
+    font-size: clamp(0.75rem, 0.6735rem + 0.3401vw, 1rem);
 }
 
 .AdditionaInfos{
     width: 100%;
     height: 30px;
     margin-left: 20px;
+    font-size: clamp(0.75rem, 0.6735rem + 0.3401vw, 1rem);
 }
 
 .myBullets{
@@ -373,38 +476,35 @@ section{
 
 .imgContainer{
     width: 45%;
-    height: 100%;
-    position: relative;
+    padding-top: 20px;
 }
 
 .mainImg{
-    width: 380px;
-    height: 378px;
+    width: 100%;
+    max-width: 379px;
+    max-height: 379px;
     object-fit: cover;
     z-index: 2;
     border-radius: 10px;
-    position: absolute;
     top: 20px;
     left: 20px;
     z-index: 5;
+    border-radius: 5px;
+    box-shadow: 15px 15px 0 -2.5px #110E1F, 15px 15px 0 2px #41CCFF;
 }
 
-.mainImg:hover ~ .imgBox{
-    transform: translateX(8px) translateY(8px);
+.mainImg:hover{
+    box-shadow: 23px 23px 0 -2.5px #110E1F, 23px 23px 0 2px #41CCFF;
     transition: all 0.3s ease-out;
 }
 
 .imgBox{
-    background-color: transparent;
     width: 380px;
     height: 380px;
-    border: 5px solid #41CCFF;
-    border-radius: 10px;
     z-index: 2;
-    position: absolute;
-    top: 25px;
-    left: 25px;
 }
+
+/*---------------- Resume ---------------- */
 
 .ResumeHeader{
     font-size: 40px;
@@ -450,7 +550,7 @@ section{
 }
 
 .school{
-    font-size: 28px;
+    font-size: clamp(1.375rem, 1.2602rem + 0.5102vw, 1.75rem);
     font-weight: 700;
     color: #CCD6F6;
 }
@@ -469,10 +569,11 @@ section{
 .Program{
     color: #CCD6F6;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: clamp(1rem, 0.9617rem + 0.1701vw, 1.125rem);
 }
 
 .schoolYear{
+    font-size: clamp(0.875rem, 0.8367rem + 0.1701vw, 1rem);
     background-color:#18253a;
     color: #CCD6F6;
     display: flex;
@@ -493,10 +594,12 @@ section{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    font-size: clamp(0.875rem, 0.8367rem + 0.1701vw, 1rem);
 }
 
 .MyCertificates{
     display: grid;
+    place-items:center;
     grid-template-columns: 1fr 1fr;
     row-gap: 30px;
     column-gap: 30px;
@@ -504,14 +607,21 @@ section{
 
 .CertificateContainer{
     margin-top: 15px;
-    width: 450px;
+    width: clamp(17.5rem, 13.7117rem + 16.8367vw, 29.875rem);
+    height: clamp(23.75rem, 21.8367rem + 8.5034vw, 30rem);
     display: flex;
     flex-direction: column;
     row-gap: 10px;
 }
 
+.certificate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .certificate img{
-    width: 450px;
+    width: clamp(17.5rem, 13.7117rem + 16.8367vw, 29.875rem);
     box-shadow: 0 2px 10px rgba(32, 32, 32, 0.612);
 }
 
@@ -533,18 +643,21 @@ section{
 }
 
 .CertificateContainer a{
-    height: 317.61px;
+    width: 100%;
 }
 
-.CertificateContainer a:hover{
+.CertificateContainer a:hover img{
     box-shadow: 0 7px 20px #41ccffc2;
     transform: translateY(-5px);
     transition: all 0.3s ease-in-out;
 }
 
-#Projects, #Resume, #Contacts{
-    height: auto;
+
+section{
+    min-height: 70vh;
 }
+
+/*---------------- Projects ---------------- */
 
 .ProjectContainer{
     width: 92.5%;
@@ -552,12 +665,12 @@ section{
     flex-direction: column;
     row-gap: 5px;
     margin-top: 20px;
-    margin-bottom: 70px;
+    margin-bottom: clamp(0.625rem, -0.523rem + 5.102vw, 4.375rem);
     justify-content: center;
     min-height: 300px;
     position: relative;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: clamp(0.3125rem, -0.1658rem + 2.1259vw, 1.875rem);
+    padding-bottom: clamp(0.3125rem, -0.1658rem + 2.1259vw, 1.875rem);
 }
 
 .projectLeft{
@@ -566,6 +679,7 @@ section{
 }
 
 .projectLeft .ProjectThumbnail{
+
     position: absolute;
     justify-self: center;
     right: 0;
@@ -577,29 +691,37 @@ section{
 }
 
 .projectRight .ProjectThumbnail{
+
     position: absolute;
     justify-self: center;
     left: 0;
 }
 
 .ProjectThumbnail img{
-    height: 270px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    object-fit: contain;
+    height: 100%;
+    max-height: 270px;
+    width: 100%;
+    max-width: 575px;
 }
 
 .ProjectIntro{
+    font-size: clamp(0.875rem, 0.8367rem + 0.1701vw, 1rem);
     font-family: 'Source Code Pro', monospace;
     color: #41CCFF;
+    z-index: 3;
 }
 
 .ProjectTitle{
     color: #CCD6F6;
     font-weight: 900;
-    font-size: 30px;
+    font-size: clamp(1.5rem, 1.3852rem + 0.5102vw, 1.875rem);
     max-width: 400px;
+    z-index: 3;
 }
 
 .ProjectDesc{
+    font-size: clamp(0.875rem, 0.8367rem + 0.1701vw, 1rem);
     border-radius: 3px;
     z-index: 3;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -619,11 +741,11 @@ section{
     padding-right: 10px;
 }
 
+/*---------------- Contacts ---------------- */
+
 .ContactContainer{
     margin-top: 50px;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 80px;
+    padding-bottom: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -631,17 +753,23 @@ section{
 }
 
 .GetInTouch{
+    min-width: 10ch;
+    display: block;
     color: #CCD6F6;
-    font-size: 60px;
+    font-size: clamp(2.8125rem, 2.5255rem + 1.2755vw, 3.75rem);
     font-weight: 900;
     text-align: center;
     margin-bottom: 10px;
 }
 
 .message{
+    font-size: clamp(0.75rem, 0.6735rem + 0.3401vw, 1rem);
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 600px;
     color: #8892B0;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: clamp(3.75rem, 2.9847rem + 3.4014vw, 6.25rem);
 }
 
 .SayHibtn{
@@ -654,13 +782,14 @@ section{
     justify-content: center;
     border: none;
     border-radius: 15px;
-    box-shadow: 0px 5px 10px #41ccff36;
+    box-shadow: 0px 15px 20px #41ccff69;
     transition: all 0.3s;
 }
 
 .SayHibtn:hover {
     transform: translateY(-3px);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 8px 15px #0000004d;
+    transition: all 0.5s ease-in-out;
 }
 
 .SayHibtn:active {
@@ -693,7 +822,7 @@ section{
 
 .SayHibtn:hover svg {
     transform: rotate(45deg);
-} 
+}
 
 footer{
     height: 70px;
