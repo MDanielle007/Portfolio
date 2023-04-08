@@ -379,8 +379,8 @@ section{
 }
 
 .ContactMebtn{
-    width:clamp(9.375rem, 7.5574rem + 8.0782vw, 15.3125rem);
-    height: clamp(1.875rem, 1.4923rem + 1.7007vw, 3.125rem);;
+    width: clamp(9.375rem, 7.5574rem + 8.0782vw, 15.3125rem);
+    height: clamp(2.375rem, 2.1454rem + 1.0204vw, 3.125rem);
     border: 3px solid #41CCFF;
     border-radius: 5px;
     display: flex;
