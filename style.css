@@ -51,7 +51,8 @@ body::-webkit-scrollbar-thumb {
 header{
     position: fixed;
     height: 70px;
-    width: 100%;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: end; 
     line-height: 1.3;
@@ -378,7 +379,7 @@ section{
 }
 
 .ContactMebtn{
-    width: clamp(6.25rem, 3.3801rem + 12.7551vw, 15.625rem);;
+    width:clamp(9.375rem, 7.5574rem + 8.0782vw, 15.3125rem);
     height: clamp(1.875rem, 1.4923rem + 1.7007vw, 3.125rem);;
     border: 3px solid #41CCFF;
     border-radius: 5px;
