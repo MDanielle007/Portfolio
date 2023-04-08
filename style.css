@@ -13,6 +13,14 @@
     color: #CCD6F6;
 }
 
+:root{
+    --color-1:#41CCFF;
+    --color-2:#18253a;
+    --color-3:#110E1F;
+    --color-4:#8892B0;
+    --color-5:#CCD6F6;
+}
+
 
 html{
     scroll-behavior: smooth;
@@ -68,7 +76,7 @@ header{
 
 .myLogo{
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 30px;
 }
 
@@ -144,7 +152,6 @@ header{
 .dropdown_menu.open{
     height: 280px;
     padding: 10px;
-    backdrop-filter: blur(10px);
     box-shadow: 0 5px 10px #0b091488;
 }
 
@@ -240,14 +247,15 @@ section{
 }
 
 .socialToolTip{
+    display:none;
     opacity: 0;
     position: absolute;
     background-color: #18253a66;
     color: #CCD6F6;
-    min-width: 150px;
+    min-width: 130px;
     border-radius: 5px;
-    backdrop-filter: blur(10px);
-    left:40px;
+    backdrop-filter: blur(5px);
+    left: clamp(1.875rem, 1.6837rem + 0.8503vw, 2.5rem);
     padding: 5px 10px 5px 10px;
     font-size: clamp(0.625rem, 0.5293rem + 0.4252vw, 0.9375rem);
     transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -256,7 +264,6 @@ section{
 
 .Socials:hover .socialToolTip{
     display: block;
-    opacity: 1;
     opacity: 1;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px #41ccffb0;
@@ -612,6 +619,12 @@ section{
     row-gap: 10px;
 }
 
+.CertificateContainer:hover~.certificate a img{
+    box-shadow: 0 7px 20px #41ccffc2;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+}
+
 .certificate{
     display: flex;
     justify-content: center;
@@ -689,13 +702,13 @@ section{
 }
 
 .projectRight .ProjectThumbnail{
-
     position: absolute;
     justify-self: center;
     left: 0;
 }
 
 .ProjectThumbnail img{
+    position: relative;
     object-fit: contain;
     height: 100%;
     max-height: 270px;
