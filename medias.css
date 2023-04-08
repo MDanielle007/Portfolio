@@ -6,7 +6,6 @@
 
     .projectLeft .ProjectThumbnail, .projectRight .ProjectThumbnail{
         position: relative;
-        
     }
 }
 
@@ -21,6 +20,10 @@
 
     .certificate img{
         width: 70%;
+    }
+    section{
+        padding-left: 35px;
+        padding-right: 35px;
     }
 
     .certificateInfo{
