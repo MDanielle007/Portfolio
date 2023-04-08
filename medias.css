@@ -6,6 +6,7 @@
 
     .projectLeft .ProjectThumbnail, .projectRight .ProjectThumbnail{
         position: relative;
+        
     }
 }
 
@@ -53,9 +54,19 @@
         flex-direction: column;
     }
 
+    #AboutMe{
+        height: auto;
+    }
+
     section{
+        width: 95%;
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .infosAboutMe summary, .imgContainer{
+        padding-left: clamp(0.625rem, 0.4337rem + 0.8503vw, 1.25rem);
+        padding-right: clamp(0.625rem, 0.4337rem + 0.8503vw, 1.25rem);
     }
 
     .infosAboutMe summary p{
