@@ -49,13 +49,26 @@
     }
 }
 
-@media screen and (max-width:669px) {
+@media screen and (max-width:669px){
+    body::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: #8892b0dc;
+    }
+
     body{
         position: relative;
     }
+    
     header{
-        position: absolute;
         box-sizing: border-box;
+    }
+
+    .ContactMebtn{
+        border-width: 2px;
     }
 
     .AMmaincontent{
