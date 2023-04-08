@@ -50,6 +50,14 @@
 }
 
 @media screen and (max-width:669px) {
+    body{
+        position: relative;
+    }
+    header{
+        position: absolute;
+        box-sizing: border-box;
+    }
+
     .AMmaincontent{
         flex-direction: column;
     }
