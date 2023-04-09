@@ -6,6 +6,9 @@
     padding: 0;
     font-family: 'Alexandria', sans-serif,Roboto,Arial;
     text-decoration: none;
+}
+
+*, *:before, *:after{
     box-sizing: border-box;
 }
 
@@ -20,8 +23,11 @@
     --color-3:#110E1F;
     --color-4:#8892B0;
     --color-5:#CCD6F6;
+    --fadeDown: fade-down;
+    --fadeUP:fade-up;
+    --fadeLeft:fade-left;
+    --fadeRight:fade-right;
 }
-
 
 html{
     scroll-behavior: smooth;
@@ -82,6 +88,7 @@ header{
     left: 30px;
 }
 
+
 .myLogo img{
     width: 35px;
     height: 40px;
@@ -116,6 +123,7 @@ header{
 .Options a:hover span{
     color: #110E1F;
 }
+
 
 .navbar_links .Options a{
     font-family: 'Source Code Pro', monospace;
@@ -269,6 +277,7 @@ section{
 
 .Socials:hover .socialToolTip{
     display: block;
+    width: 20ch;
     opacity: 1;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px #41ccffb0;
@@ -442,6 +451,7 @@ section{
 
 .AMmaincontent{
     display: flex;
+    margin-bottom: 10px;
 }
 
 .infosAboutMe{
@@ -488,6 +498,7 @@ section{
 .imgContainer{
     width: 45%;
     padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 .mainImg{
@@ -534,6 +545,7 @@ section{
     row-gap: 20px;
 }
 
+
 .interestContent{
     width: clamp(9.375rem, 7.6531rem + 7.6531vw, 15rem);
     height:clamp(5rem, 3.852rem + 5.102vw, 8.75rem);
@@ -567,6 +579,12 @@ section{
     font-size: clamp(0.875rem, 0.7219rem + 0.6803vw, 1.375rem);
     font-weight: 700;
     backdrop-filter: blur(4px);
+}
+
+.interestContent:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px #41ccff94;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /*---------------- Resume ---------------- */
@@ -675,6 +693,7 @@ section{
     flex-wrap: wrap;
     column-gap: clamp(0.3125rem, 0.1212rem + 0.8503vw, 0.9375rem);
     row-gap: 15px;
+    margin-bottom: 15px
 }
 
 .skill{
