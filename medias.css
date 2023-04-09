@@ -21,6 +21,7 @@
     .certificate img{
         width: 70%;
     }
+
     section{
         padding-left: 35px;
         padding-right: 35px;
@@ -30,13 +31,8 @@
         text-align: center;
         align-items: center;
     }
-
     .navbar_links{
         display: none;
-    }
-
-    .navContainer{
-        justify-content: end;
     }
 
     .navContainer .toggle_btn{
@@ -49,23 +45,6 @@
 }
 
 @media screen and (max-width:669px){
-    body::-webkit-scrollbar {
-        width: 4px;
-        height: 4px;
-    }
-
-    body::-webkit-scrollbar-thumb {
-        background-color: #8892b0dc;
-    }
-
-    body{
-        position: relative;
-    }
-    
-    header{
-        box-sizing: border-box;
-    }
-
     .ContactMebtn{
         border-width: 2px;
     }
@@ -79,9 +58,9 @@
     }
 
     section{
-        width: 95%;
-        padding-left: 15px;
-        padding-right: 15px;
+        width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .infosAboutMe summary, .imgContainer{
@@ -139,6 +118,7 @@
 
     .SkillsContainer{
         display: grid;
+        place-items: center;
         padding: 0px;
         grid-template-columns: 1fr 1fr;
         column-gap: 5px;
