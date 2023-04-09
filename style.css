@@ -137,23 +137,26 @@ header{
 }
 
 .dropdown_menu{
+    z-index: 5;
     display: none;
-    list-style: none;
-    position: absolute;
+    pointer-events: none;
+    backdrop-filter: blur(3px);
+    position: fixed;
     top: 75px;
     height: 0px;
     right: 15px;
     width: 300px;
     background-color: #131d2ec6;
-    backdrop-filter: blur(10px);
     border-radius: 10px;
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown_menu.open{
+    pointer-events: all;
+    opacity: 1;
     height: 280px;
-    padding: 10px;
+    padding: 0 15px;
     box-shadow: 0 5px 10px #0b091488;
 }
 
@@ -304,7 +307,7 @@ section{
 }
 
 /*---------------- Home ---------------- */
-#Home,#AboutMe{
+#Home{
     height: 100vh;
 }
 
@@ -436,6 +439,7 @@ section{
 
 /*---------------- About Me ---------------- */
 
+
 .AMmaincontent{
     display: flex;
 }
@@ -509,6 +513,60 @@ section{
     width: 380px;
     height: 380px;
     z-index: 2;
+}
+
+.interestsPart{
+    width: 100%;
+}
+
+.interestHeader{
+    font-size: 32px;
+    color:#41CCFF;
+    font-weight: 900;
+}
+
+.interestsContainer{
+    padding: 20px 15px 20px 15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: clamp(0.625rem, 0.4337rem + 0.8503vw, 1.25rem);
+    row-gap: 20px;
+}
+
+.interestContent{
+    width: clamp(9.375rem, 7.6531rem + 7.6531vw, 15rem);
+    height:clamp(5rem, 3.852rem + 5.102vw, 8.75rem);
+    background-color:#18253a;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.interestContent img{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.interestDesc{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #18253ab1;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 15px;
+    color: #CCD6F6;
+    font-size: clamp(0.875rem, 0.7219rem + 0.6803vw, 1.375rem);
+    font-weight: 700;
+    backdrop-filter: blur(4px);
 }
 
 /*---------------- Resume ---------------- */
@@ -602,6 +660,57 @@ section{
     flex-direction: column;
     row-gap: 10px;
     font-size: clamp(0.875rem, 0.8367rem + 0.1701vw, 1rem);
+}
+
+.MySkills{
+    width:100%;
+    padding: 10px 15px 30px 15px;
+}
+
+.SkillsContainer{
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: clamp(0.3125rem, 0.1212rem + 0.8503vw, 0.9375rem);
+    row-gap: 15px;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    column-gap: 5px;
+    width: clamp(6.875rem, 6.1097rem + 3.4014vw, 9.375rem);
+}
+
+.skill:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px #41ccff94;
+    background-color: #110e1fb0;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill svg{
+    width: clamp(3.125rem, 2.551rem + 2.551vw, 5rem);
+    height: clamp(3.125rem, 2.551rem + 2.551vw, 5rem);
+}
+
+.skillname{
+    font-size: clamp(1.125rem, 1.0102rem + 0.5102vw, 1.5rem);
+    color: #CCD6F6;
+    text-align: center;
+    padding-bottom: 3px;
+}
+
+.skill:hover .skillname{
+    color: #41CCFF;
+    font-weight: 700;
 }
 
 .MyCertificates{
