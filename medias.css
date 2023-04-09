@@ -5,8 +5,7 @@
     }
 
     .projectLeft .ProjectThumbnail, .projectRight .ProjectThumbnail{
-        position: relative;
-        
+        position: relative;    
     }
 }
 
@@ -122,5 +121,26 @@
 
     .ProjectContainer{
         width: 100%;
+    }
+
+    .interestsContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        padding-top: clamp(0.5rem, 0.2704rem + 1.0204vw, 1.25rem);;
+        padding-left:clamp(0rem, -0.3827rem + 1.7007vw, 1.25rem);
+        padding-right:clamp(0rem, -0.3827rem + 1.7007vw, 1.25rem);
+    }
+
+    .MySkills{
+        width: 95%;
+        padding: 5px;
+    }
+
+    .SkillsContainer{
+        display: grid;
+        padding: 0px;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
     }
 }
