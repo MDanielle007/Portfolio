@@ -1,6 +1,4 @@
-let prevScrollPos = window.pageYOffset;
-
-window.addEventListener("scroll", function() {
+let prevScrwindow.addEventListener("scroll", function() {
     var header = document.querySelector("header");
     if (window.scrollY > 100) {
         header.classList.add("shadow"); // add the 'shadow' class
