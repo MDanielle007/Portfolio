@@ -94,198 +94,36 @@ header{
     animation-delay: 1.4s;
 }
 
-.sectionheader h1{
+.fade-in-left{
     opacity: 0;
-    animation: var(--fadeLeft) 0.8s ease forwards;
-    animation-delay: 0.3s;
+    animation-name:  fade-left;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    animation-delay: 0s; /* Default delay time */
 }
 
-#AboutMe .sectionheader .horizontalLine{
+.fade-in-right{
     opacity: 0;
-    animation: fadeHoriLine 1.5s ease forwards;
-    animation-delay: 0.4s;
+    animation-name:  fade-right;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    animation-delay: 0s; /* Default delay time */
 }
 
-.infosAboutMe{
+.fade-in-up {
     opacity: 0;
-    animation: var(--fadeUP) 1s ease forwards;
-    animation-delay: 0.8s;
+    animation-name: fade-up;
+    animation-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    animation-delay: 0s; /* Default delay time */
 }
 
-.imgContainer{
+.fade-in-down {
     opacity: 0;
-    animation: var(--fadeUP) 1s ease forwards;
-    animation-delay: 0.9s;
-}
-
-.interestHeader{
-    opacity: 0;
-    animation: var(--fadeUP) 1s ease forwards;
-    animation-delay: 1s;
-}
-
-.interestContent:nth-child(1){
-    opacity: 0;
-    animation: var(--fadeUP) 0.8s ease forwards;
-    animation-delay: 1.1s;
-}
-
-.interestContent:nth-child(2){
-    opacity: 0;
-    animation: var(--fadeUP) 0.8s ease forwards;
-    animation-delay: 1.3s;
-}
-
-.interestContent:nth-child(3){
-    opacity: 0;
-    animation: var(--fadeUP) 0.8s ease forwards;
-    animation-delay: 1.5s;
-}
-
-.interestContent:nth-child(4){
-    opacity: 0;
-    animation: var(--fadeUP) 0.8s ease forwards;
-    animation-delay: 1.7s;
-}
-
-.interestContent:nth-child(5){
-    opacity: 0;
-    animation: var(--fadeUP) 0.8s ease forwards;
-    animation-delay: 1.9s;
-}
-
-.interestContent:nth-child(6){
-    opacity: 0;
-    animation: var(--fadeUP) 0.8s ease forwards;
-    animation-delay: 2.1s;
-}
-
-.projectLeft{
-    opacity: 0;
-    animation: var(--fadeLeft) 1.2s ease forwards;
-    animation-delay: 0.3s;
-}
-
-.projectRight{
-    opacity: 0;
-    animation: var(--fadeRight) 1.2s ease forwards;
-    animation-delay: 0.3s;
-}
-
-.ResumeHeader{
-    opacity: 0;
-    animation: var(--fadeRight) 1s ease forwards;
-    animation-delay: 0.4s;
-}
-
-.verticalLine{
-    opacity: 0;
-    animation: var(--fadeUP) 0.8s ease forwards;
-    animation-delay: 0.5s;
-}
-
-.Educationalterm:nth-child(1){
-    opacity: 0;
-    animation: var(--fadeRight) 1s ease forwards;
-    animation-delay: 0.8s;
-}
-
-.Educationalterm:nth-child(2){
-    opacity: 0;
-    animation: var(--fadeRight) 1s ease forwards;
-    animation-delay: 1s;
-}
-
-.Educationalterm:nth-child(3){
-    opacity: 0;
-    animation: var(--fadeRight) 1s ease forwards;
-    animation-delay: 1.2s;
-}
-
-.skill:nth-child(1){
-    opacity: 0;
-    animation: var(--fadeUP) 0.8s ease forwards;
-    animation-delay: 0.5s;
-}
-
-.skill:nth-child(2){
-    opacity: 0;
-    animation: var(--fadeUP) 0.8s ease forwards;
-    animation-delay: 0.7s;
-}
-
-.skill:nth-child(3){
-    opacity: 0;
-    animation: var(--fadeUP) 0.8s ease forwards;
-    animation-delay: 0.9s;
-}
-
-.skill:nth-child(4){
-    opacity: 0;
-    animation: var(--fadeUP) 0.8s ease forwards;
-    animation-delay: 1.1s;
-}
-
-.skill:nth-child(5){
-    opacity: 0;
-    animation: var(--fadeUP) 0.8s ease forwards;
-    animation-delay: 1.3s;
-}
-
-.CertificateContainer:nth-child(1){
-    opacity: 0;
-    animation: var(--fadeUP) 1.2s ease forwards;
-    animation-delay: .5s;
-}
-
-.CertificateContainer:nth-child(2){
-    opacity: 0;
-    animation: var(--fadeUP) 1.2s ease forwards;
-    animation-delay: .7s;
-}
-
-#Contacts .sectionheader h1, #Contacts .sectionheader .horizontalLine{
-    opacity: 0;
-    animation: var(--fadeUP) 1.2s ease forwards;
-    animation-delay: .3s;
-}
-
-.GetInTouch{
-    opacity: 0;
-    animation: var(--fadeUP) 1s ease forwards;
-    animation-delay: .5s;
-}
-
-.message{
-    opacity: 0;
-    animation: var(--fadeUP) 1s ease forwards;
-    animation-delay: .7s;
-}
-
-.SayHibtn{
-    opacity: 0;
-    animation: var(--fadeUP) 1s ease forwards;
-    animation-delay: .9s;
-}
-
-footer{
-    opacity: 0;
-    animation: var(--fadeUP) 1s ease forwards;
-    animation-delay: 1.2s;
-}
-
-@keyframes fadeHoriLine {
-    0%{
-        width: 0;
-        opacity: 0;
-        transform: translatex(-50px);
-    }
-
-    100%{
-        width: 100%;
-        opacity: 1;
-        transform: translatex(0px);
-    }
+    animation-name: fade-down;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    animation-delay: 0s; /* Default delay time */
 }
 
 @keyframes fade-up {
