@@ -71,11 +71,6 @@ header{
     background-color: rgba(17, 14, 31, 0.85);
 }
 
-.header-hide {
-    transform: translateY(-100%);
-    transition: all 0.3s ease-in-out;
-}
-
 .shadow {
     background-color: rgba(21, 16, 44, 0.85);
     box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.403);
@@ -425,6 +420,7 @@ section{
     display: flex;
     align-items: center;
     column-gap: 10px;
+    animation-duration: 1.2s;
 }
 
 .sectionheader h1{
@@ -457,6 +453,7 @@ section{
     height: 100%;
     display: flex;
     flex-direction: column;
+    animation-duration: 1.2s;
 }
 
 .infosAboutMe summary{
@@ -497,6 +494,7 @@ section{
     width: 45%;
     padding-top: 20px;
     padding-bottom: 30px;
+    animation-duration: 1s;
 }
 
 .mainImg{
@@ -532,6 +530,7 @@ section{
     font-size: 32px;
     color:#41CCFF;
     font-weight: 900;
+    animation-duration: 1s;
 }
 
 .interestsContainer{
@@ -552,6 +551,7 @@ section{
     display: flex;
     flex-direction: column;
     position: relative;
+    animation-duration: 0.8s;
 }
 
 .interestContent img{
@@ -591,10 +591,12 @@ section{
     font-size: 40px;
     color:#41CCFF;
     font-weight: 900;
+    animation-duration: 1s;
 }
 
 .Educationalterm{
     margin-right: 20px;
+    animation-duration: 1.5s;
 }
 
 .educAttainmentContainer{
@@ -614,6 +616,7 @@ section{
 .timeLine .verticalLine{
     width: 2px;
     height: 100%;
+    animation-duration: 1s;
 }
 
 .EducationRecord{
@@ -702,6 +705,7 @@ section{
     width: auto;
     column-gap: 5px;
     width: clamp(6.875rem, 6.1097rem + 3.4014vw, 9.375rem);
+    animation-duration: 1s;
 }
 
 .skill:hover{
@@ -745,6 +749,7 @@ section{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    animation-duration: 1.5s;
 }
 
 .CertificateContainer:hover~.certificate a img{
@@ -815,6 +820,7 @@ section{
 .projectLeft{
     align-items: start;
     text-align: left;
+    animation-duration: 2s;
 }
 
 .projectLeft .ProjectThumbnail{
@@ -827,6 +833,7 @@ section{
 .projectRight{
     align-items: end;
     text-align: right;
+    animation-duration: 2s;
 }
 
 .projectRight .ProjectThumbnail{
@@ -905,6 +912,7 @@ section{
     font-weight: 900;
     text-align: center;
     margin-bottom: 10px;
+    animation: 1s;
 }
 
 .message{
@@ -915,6 +923,7 @@ section{
     color: #8892B0;
     text-align: center;
     margin-bottom: clamp(3.75rem, 2.9847rem + 3.4014vw, 6.25rem);
+    animation-duration: 1s;
 }
 
 .SayHibtn{
@@ -929,6 +938,7 @@ section{
     border-radius: 15px;
     box-shadow: 0px 15px 20px #41ccff69;
     transition: all 0.3s;
+    animation-duration: 1s;
 }
 
 .SayHibtn:hover {
