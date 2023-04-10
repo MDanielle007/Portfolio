@@ -34,6 +34,10 @@
     .navbar_links{
         display: none;
     }
+    
+    .interestsContainer{
+        justify-content: center;
+    }
 
     .navContainer .toggle_btn{
         display: block;
