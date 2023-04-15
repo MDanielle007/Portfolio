@@ -49,6 +49,16 @@
 }
 
 @media screen and (max-width:669px){
+    html{
+        overflow-x: hidden;
+    }
+
+    section::-webkit-scrollbar,
+    section::-webkit-scrollbar-track,
+    section::-webkit-scrollbar-thumb {
+        opacity: 0;
+    }
+
     .ContactMebtn{
         border-width: 2px;
     }
